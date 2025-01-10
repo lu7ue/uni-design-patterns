@@ -1,6 +1,12 @@
 # Project Overview
 
 This project implements a Java console program designed as a supermarket management system. The main functionality includes inventory management and product sales.
+- Link: https://github.com/lu7ue/uni-design-patterns
+
+## Team Members
+- Luyue Zhang: Part 1
+- Anan Li: Part 2
+
 
 ## File Structure
 
@@ -299,8 +305,3 @@ public class CommandExecutor {
 - Observer pattern monitors products created by the Factory Method
 - Facade uses Command pattern to execute sales operations
 - Prototype pattern supports efficient product creation for bulk sales
-
-# Team Members
-- Luyue Zhang: Part 1
-- Anan Li: Part 2
-
