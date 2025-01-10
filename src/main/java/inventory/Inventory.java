@@ -20,7 +20,7 @@ public class Inventory {
     }
 
     public void addProduct(Product product) {
-        System.out.println(product.getName() + " 添加到库存"); // 使用 getName() 访问
-        notifyObservers(product.getName() + " 已添加到库存");
+        System.out.println(product.getName() + " is adding to the inventory.");
+        notifyObservers(product.getName() + " has been added to the inventory.");
     }
 }

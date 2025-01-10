@@ -10,37 +10,37 @@ import src.main.java.product.ProductPrototype;
 
 public class Main {
     public static void main(String[] args) {
-        // 创建工厂
+        // Create a product factory
         ProductFactory fruitFactory = new FruitFactory();
 
-        // 创建产品
-        Product apple = fruitFactory.createProduct("苹果");
+        // Create a product
+        Product apple = fruitFactory.createProduct("Apple");
 
-        // 动态添加装饰
+        // Adding decorators to the product
         Product importedApple = new ImportedProduct(apple);
         Product discountedApple = new DiscountedProduct(importedApple);
 
-        // 创建库存并添加观察者
+        // Create an inventory and add observers
         Inventory inventory = new Inventory();
-        inventory.addObserver(new Admin("张三"));
-        inventory.addObserver(new Admin("李四"));
+        inventory.addObserver(new Admin("Admin1"));
+        inventory.addObserver(new Admin("Admin2"));
 
-        // 入库操作
+        // Add products to the inventory
         discountedApple.store();
         inventory.addProduct(discountedApple);
 
-        // 创建商品原型
-        ProductPrototype productPrototype = new ConcreteProduct("苹果");
+        // Create a product prototype
+        ProductPrototype productPrototype = new ConcreteProduct("Apple");
 
-        // 克隆多个商品
+        // Copy the product prototype and create two products
         ConcreteProduct product1 = (ConcreteProduct) productPrototype.cloneProduct();
         ConcreteProduct product2 = (ConcreteProduct) productPrototype.cloneProduct();
 
-        // 创建售出命令
+        // Create a command to sell the products
         SellProductCommand command1 = new SellProductCommand(product1);
         SellProductCommand command2 = new SellProductCommand(product2);
 
-        // 执行售出命令
+        // Execute the commands
         CommandExecutor executor = new CommandExecutor();
         executor.addCommand(command1);
         executor.addCommand(command2);

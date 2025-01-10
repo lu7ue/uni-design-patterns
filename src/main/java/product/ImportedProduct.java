@@ -8,6 +8,6 @@ public class ImportedProduct extends ProductDecorator {
     @Override
     public void store() {
         decoratedProduct.store();
-        System.out.println(name + " 是进口商品");
+        System.out.println(name + " is an imported product.");
     }
 }

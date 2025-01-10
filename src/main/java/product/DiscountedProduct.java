@@ -8,6 +8,6 @@ public class DiscountedProduct extends ProductDecorator {
     @Override
     public void store() {
         decoratedProduct.store();
-        System.out.println(name + " 正在打折");
+        System.out.println(name + " is on sale.");
     }
 }

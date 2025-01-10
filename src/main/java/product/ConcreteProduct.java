@@ -7,7 +7,7 @@ public class ConcreteProduct extends Product implements ProductPrototype {
 
     @Override
     public void store() {
-        System.out.println(name + " 已入库");
+        System.out.println(name + " has been added to the inventory.");
     }
 
     @Override

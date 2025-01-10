@@ -9,7 +9,6 @@ public abstract class Product {
 
     public abstract void store();
 
-    // 新增一个 getter 方法
     public String getName() {
         return name;
     }

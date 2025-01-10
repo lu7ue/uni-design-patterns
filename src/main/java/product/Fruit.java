@@ -7,6 +7,6 @@ public class Fruit extends Product {
 
     @Override
     public void store() {
-        System.out.println(name + " 已入库（水果）");
+        System.out.println(name + " has been added to the inventory (Fruit).");
     }
 }
